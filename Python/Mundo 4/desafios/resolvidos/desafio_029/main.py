@@ -7,9 +7,9 @@ def main():
     d.escrever("Oi")
     d.escrever("Boa noite")
     d.escrever("Será que vai ter gol do Rayan hoje")
-
+    d.senha = ("rayan", "oi")
     inspect(d, private=True, methods=True)
-    d.ler("rayan")
+    d.ler("oi")
 
 
 if __name__ == "__main__":

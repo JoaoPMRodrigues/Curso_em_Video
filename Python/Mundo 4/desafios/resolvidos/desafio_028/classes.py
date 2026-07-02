@@ -4,7 +4,6 @@ from rich import print
 class Termostato:
     def __init__(self, temperatura=24):
         self.__temperatura = temperatura
-        self.ftemperatura = f"{temperatura}{chr(176)}C"
 
     @property
     def temperatura(self):
@@ -12,12 +11,17 @@ class Termostato:
 
     @temperatura.setter
     def temperatura(self, temperatura):
-        if float(temperatura*2) != int(temperatura*2):
+        if temperatura % 0.5:
             raise ValueError(
                 f"\033[31mTemperatura de {temperatura}{chr(176)}C inválida!\033[0m")
 
-        if 16 <= temperatura <= 24:
+        if 16 <= temperatura <= 30:
             self.__temperatura = temperatura
-            self.ftemperatura = f"{temperatura}{chr(176)}C"
-            return
-        print("[red]Valor inválido![/]")
+        elif temperatura < 16:
+            self.__temperatura = 16
+        else:
+            self.__temperatura = 30
+
+    @property
+    def ftemperatura(self):
+        return f"{self.__temperatura}{chr(176)}C"
