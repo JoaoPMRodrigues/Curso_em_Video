@@ -13,11 +13,6 @@ Curso em Video/
 │   ├── Mundo 2/
 │   ├── Mundo 3/
 │   └── Mundo 4/
-│
-├── Java/
-│   ├── Básico/
-│   └── POO/
-│
 └── README.md
 ```
 
@@ -27,11 +22,6 @@ Curso em Video/
 - **Mundo 2** — Estruturas de controle
 - **Mundo 3** — Estruturas compostas
 - **Mundo 4** — Programação Orientada a Objetos (POO)
-
-## Java
-
-- **Básico** — Sintaxe, lógica e fundamentos da linguagem
-- **POO** — Programação Orientada a Objetos em Java (Em breve)
 
 ## Objetivos
 
@@ -44,7 +34,6 @@ Curso em Video/
 ## Cursos
 
 - Python 3
-- Java
 
 ---
 

@@ -1,5 +1,14 @@
+# Remove ambientes do python
 __pycache__/
 *.pyc
 .env
+venv/
+
+# Remove 
 .vscode/
+
+# Remove arquivos de texto
 *.txt
+
+#Remove Makefile
+Makefile
