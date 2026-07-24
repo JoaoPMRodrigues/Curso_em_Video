@@ -1,6 +1,6 @@
 from .contabancaria import ContaBancaria
 from rich.table import Table
-from rich import print
+from rich import print, inspect
 from pwinput import pwinput
 
 
@@ -8,6 +8,7 @@ class Menu:
     def __init__(self, conta: ContaBancaria):
         self.opcao = 0
         self.conta = conta
+        self.fim = False
 
     def criarMenu(self):
         tabela = Table(title="[blue]Banco Master[/]", style="blue")
@@ -18,7 +19,8 @@ class Menu:
         tabela.add_row("3.", "Saque")
         tabela.add_row("4.", "Trocar Titular")
         tabela.add_row("5.", "Trocar senha")
-        tabela.add_row("6.", "Sair")
+        tabela.add_row("6.", "Inspecionar conta")
+        tabela.add_row("7.", "Sair")
         print(tabela)
         self.opcao = int(input("Qual opção você deseja? "))
         self.realizaOpção()
@@ -41,6 +43,9 @@ class Menu:
                 novaSenha = str(pwinput("Qual será a nova senha? "))
                 self.conta.senha = novaSenha
             case 6:
+                inspect(self.conta, title=f"Conta do {self.conta.titular}")
+            case 7:
                 print("[green]Obrigado e volte sempre![/]")
+                self.fim = True
             case _:
                 print("[red]Opção inválida[/]")

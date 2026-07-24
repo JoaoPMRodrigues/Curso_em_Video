@@ -1,14 +1,12 @@
 from rich import print
 from hashlib import sha256
 from pwinput import pwinput
-# Declaração de Classe
 
 
 class ContaBancaria:
     """
-    Essa classe cria a conta bancária de uma pessoa
-    Para criar uma nova conta, faça:
-    variavel = ContaBancaria(nome,id,saldo)
+    Essa classe cria a conta bancária de uma pessoa. Para criar uma nova conta, faça: 
+    variavel = ContaBancaria(id, nome, saldo, senha)
     """
 
     def __init__(self, id: int, nome: str = None, saldo: float = 0, senha: str = None):

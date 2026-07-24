@@ -21,11 +21,11 @@ def main():
         while True:
 
             menu.criarMenu()
-            if menu.opcao == 6:
+            if menu.fim:
                 break
 
     except KeyboardInterrupt:
-        print("[red]Criou a opção de sair pq arrombado? [/]")
+        print("[red]Código interrompido pelo usuário! =( [/]")
 
 
 if __name__ == "__main__":
