@@ -1,9 +1,10 @@
-from classes import Aluno
+from .lib import Aluno
 from rich import inspect
 
 
 def main():
     a1 = Aluno("João", 2007, "CC")
+    a1.add_curso("SIN")
     inspect(a1)
 
 
